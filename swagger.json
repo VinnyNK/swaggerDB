@@ -57,8 +57,7 @@
             "required":true,
             "schema":{
               "username": {
-                "type": "email",
-                "required": true
+                "type": "email"
               }
             }
           }
