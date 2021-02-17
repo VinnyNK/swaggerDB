@@ -6,16 +6,12 @@
         }
     ],
     "info": {
-        "description": ":dog: :cat: :rabbit: This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+        "description": "",
         "version": "1.0.0",
-        "title": "Swagger Petstore",
-        "termsOfService": "http://swagger.io/terms/",
+        "title": "Finance",
+        "termsOfService": "",
         "contact": {
-            "email": "apiteam@swagger.io"
-        },
-        "license": {
-            "name": "Apache 2.0",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+            "email": ""
         }
     },
     "tags": [
@@ -47,7 +43,7 @@
                 "parameters": [],
                 "operationId": "",
                 "responses": {
-                    "210": {
+                    "201": {
                         "description": "Usuario criado"
                     }
                 },
@@ -132,7 +128,7 @@
                     }
                 },
                 "tags": [
-                    "Conta Banco"
+                    "Bank Account"
                 ],
                 "security": [
                     {
@@ -155,7 +151,7 @@
                                         "example": "alias_exaple"
                                     },
                                     "balance": {
-                                        "type": "float",
+                                        "type": "number",
                                         "example": 100
                                     },
                                     "is_active": {
@@ -238,7 +234,7 @@
                                         "example": "alias_exaple"
                                     },
                                     "value": {
-                                        "type": "float",
+                                        "type": "number",
                                         "example": 2000
                                     }
                                 }
@@ -288,6 +284,9 @@
                         "description": "Atividade criada para Banco"
                     }
                 },
+                "tags": [
+                    "Bank Activity"
+                ],
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -322,7 +321,7 @@
                                         "example": "alias_exaple"
                                     },
                                     "value": {
-                                        "type": "float",
+                                        "type": "number",
                                         "example": 2000
                                     }
                                 }
@@ -385,7 +384,7 @@
                                         "example": "alias_exaple"
                                     },
                                     "value": {
-                                        "type": "float",
+                                        "type": "number",
                                         "example": 2000
                                     }
                                 }
@@ -465,8 +464,8 @@
                                         "example": "expense"
                                     },
                                     "fixed_day_paid": {
-                                        "type": "float",
-                                        "example": 2000
+                                        "type": "integer",
+                                        "example": 10
                                     },
                                     "name": {
                                         "type": "string",
@@ -477,7 +476,7 @@
                                         "example": "alias_exaple"
                                     },
                                     "value": {
-                                        "type": "float",
+                                        "type": "number",
                                         "example": 2000
                                     }
                                 }
@@ -526,8 +525,8 @@
                                         "example": "expense"
                                     },
                                     "fixed_day_paid": {
-                                        "type": "float",
-                                        "example": 2000
+                                        "type": "integer",
+                                        "example": 10
                                     },
                                     "name": {
                                         "type": "string",
@@ -538,7 +537,7 @@
                                         "example": "alias_exaple"
                                     },
                                     "value": {
-                                        "type": "float",
+                                        "type": "number",
                                         "example": 2000
                                     }
                                 }
@@ -604,10 +603,6 @@
             }
         }
     },
-    "externalDocs": {
-        "description": "See AsyncAPI example",
-        "url": "https://mermade.github.io/shins/asyncapi.html"
-    },
     "components": {
         "schemas": {
             "User": {
@@ -653,7 +648,7 @@
                         "example": "alias_exaple"
                     },
                     "balance": {
-                        "type": "float",
+                        "type": "number",
                         "example": 100
                     },
                     "is_active": {
@@ -694,15 +689,15 @@
                         "example": "alias_exaple"
                     },
                     "credit_limit": {
-                        "type": "float",
+                        "type": "number",
                         "example": 2000
                     },
                     "credit_usage": {
-                        "type": "float",
+                        "type": "number",
                         "example": 500
                     },
                     "expiration_day": {
-                        "type": "float",
+                        "type": "integer",
                         "example": 10
                     },
                     "is_active": {
@@ -760,7 +755,7 @@
                         "example": "alias_exaple"
                     },
                     "value": {
-                        "type": "float",
+                        "type": "number",
                         "example": 2000
                     },
                     "create_at": {
@@ -797,15 +792,15 @@
                         "example": "alias_exaple"
                     },
                     "credit_limit": {
-                        "type": "float",
+                        "type": "number",
                         "example": 2000
                     },
                     "credit_usage": {
-                        "type": "float",
+                        "type": "number",
                         "example": 500
                     },
                     "expiration_day": {
-                        "type": "float",
+                        "type": "integer",
                         "example": 10
                     },
                     "is_active": {
@@ -837,8 +832,8 @@
                         "example": "expense"
                     },
                     "fixed_day_paid": {
-                        "type": "float",
-                        "example": 2000
+                        "type": "integer",
+                        "example": 10
                     },
                     "name": {
                         "type": "string",
@@ -849,7 +844,7 @@
                         "example": "alias_exaple"
                     },
                     "value": {
-                        "type": "float",
+                        "type": "number",
                         "example": 2000
                     },
                     "create_at": {
