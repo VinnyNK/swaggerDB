@@ -200,15 +200,7 @@
                         "name": "bank_account_id",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "name": "bank_account_id",
-                            "description": "id da conta do banco em que sera criado atividade",
-                            "required": true,
-                            "type": "integer",
-                            "format": "int64"
-                        },
                         "description": "id da conta do banco em que sera criado atividade",
-                        "deprecated": false,
                         "format": "int64"
                     },
                     {
@@ -282,15 +274,7 @@
                         "name": "bank_account_id",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "name": "bank_account_id",
-                            "description": "id da conta do banco em que sera criado atividade",
-                            "required": true,
-                            "type": "integer",
-                            "format": "int64"
-                        },
                         "description": "id da conta do banco em que sera criado atividade",
-                        "deprecated": false,
                         "format": "int64"
                     }
                 ],
@@ -361,26 +345,15 @@
                         "name": "bank_account_id",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "name": "bank_account_id",
-                            "description": "id da conta do banco em que sera criado atividade",
-                            "required": true,
-                            "type": "integer",
-                            "format": "int64"
-                        },
                         "description": "id da conta do banco em que sera criado atividade",
-                        "deprecated": false,
                         "format": "int64"
                     },
                     {
                         "name": "months",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
                         "description": "messes em que a atividade sera repetida",
-                        "format": "byte"
+                        "format": "int64"
                     }
                 ],
                 "operationId": "",
@@ -443,24 +416,13 @@
                         "name": "bank_account_id",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "name": "bank_account_id",
-                            "description": "id da conta do banco em que sera criado atividade",
-                            "required": true,
-                            "type": "integer",
-                            "format": "int64"
-                        },
                         "description": "id da conta do banco em que sera criado atividade",
-                        "deprecated": false,
                         "format": "int64"
                     },
                     {
                         "name": "months",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
                         "description": "messes em que a atividade sera repetida",
                         "format": "byte"
                     }
@@ -532,26 +494,14 @@
                         "name": "bank_account_id",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "name": "bank_account_id",
-                            "description": "id da conta do banco em que sera criado atividade",
-                            "required": true,
-                            "type": "integer",
-                            "format": "int64"
-                        },
                         "description": "id da conta do banco em que sera criado atividade",
-                        "deprecated": false,
                         "format": "int64"
                     },
                     {
                         "name": "months",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "description": "messes em que a atividade sera repetida",
-                        "format": "byte"
+                        "description": "messes em que a atividade sera repetida"
                     }
                 ],
                 "operationId": "",
@@ -614,12 +564,8 @@
                         "name": "bank_activity_id",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
                         "description": "id de uma atividade",
-                        "format": "",
-                        "deprecated": false
+                        "format": "int64"
                     }
                 ],
                 "operationId": "update_bank_activity",
@@ -682,9 +628,6 @@
                         "name": "bank_activity_id",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
                         "description": "id de uma atividade"
                     }
                 ],
@@ -713,9 +656,6 @@
                         "name": "credit_card_account_id",
                         "in": "path",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
                         "description": "id do cartão de credito"
                     }
                 ],
@@ -841,10 +781,7 @@
                     {
                         "name": "credit_card_account_id",
                         "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
+                        "required": true
                     }
                 ],
                 "operationId": "update_account_credit_card",
@@ -905,10 +842,7 @@
                     {
                         "name": "credit_card_account_id",
                         "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
+                        "required": true
                     }
                 ],
                 "operationId": "remove_account_credit_card",
