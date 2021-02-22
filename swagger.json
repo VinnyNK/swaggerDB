@@ -383,6 +383,99 @@
         }
       }
     },
+    "/account/bank/{bank_account_id}": {
+      "patch": {
+        "summary": "Update conta banco",
+        "description": "",
+        "parameters": [
+          {
+            "name": "bank_account_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "id de uma atividade"
+          }
+        ],
+        "operationId": "update_bank_account",
+        "responses": {
+          "200": {
+            "description": "Conta atualizada"
+          }
+        },
+        "tags": [
+          "Bank Account"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "number"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "paid_off": {
+                    "type": "boolean"
+                  },
+                  "paid_off_at": {
+                    "type": "string",
+                    "pattern": "/([0-9]{4})-(?:[0-9]{2})-([0-9]{2})/"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "remove conta banco",
+        "description": "",
+        "parameters": [
+          {
+            "name": "bank_account_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "id de uma conta"
+          }
+        ],
+        "operationId": "remove_bank_account",
+        "responses": {
+          "200": {
+            "description": "conta removida"
+          }
+        },
+        "tags": [
+          "Bank Account"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/activity/bank/{bank_account_id}": {
       "post": {
         "summary": "Criar Atividade para uma Bank Account",
@@ -703,7 +796,7 @@
                     "type": "boolean",
                     "example": false
                   },
-                  "number_installment": {
+                  "number_installments": {
                     "type": "integer",
                     "example": 0
                   }
@@ -712,6 +805,101 @@
             }
           }
         },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/activity/credit/{credit_card_activity_id}": {
+      "patch": {
+        "summary": "Atualizar uma atividade do cartão de crédito",
+        "description": "",
+        "parameters": [
+          {
+            "name": "credit_card_activity_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "id da atividade do cartão de crédito"
+          }
+        ],
+        "operationId": "update_credit_card_activity",
+        "responses": {
+          "200": {
+            "description": "Atividade atualizada com sucesso"
+          }
+        },
+        "tags": [
+          "Credit Card Activity"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "number"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "purchase_date": {
+                    "type": "string",
+                    "pattern": "/([0-9]{4})-(?:[0-9]{2})-([0-9]{2})/"
+                  },
+                  "is_installment": {
+                    "type": "boolean"
+                  },
+                  "number_installments": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "remover atividade de cartão de credito",
+        "description": "",
+        "parameters": [
+          {
+            "name": "credit_card_activity_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "operationId": "remove_credit_card_activity",
+        "responses": {
+          "200": {
+            "description": "Atividade removida"
+          }
+        },
+        "tags": [
+          "Credit Card Activity"
+        ],
         "security": [
           {
             "bearerAuth": []
